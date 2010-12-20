@@ -1,0 +1,3 @@
+The "list_categories.html" example shows how to use the JSONP interface to pull a list of top-level categories from your account and list them.
+
+NOTE: Using the JSONP interface will expose your API key publicly so make sure to strictly limit access provisioning provided to keys used in these cases. If you need to create, update or delete we recommend using a Javascript proxy so you can keep your API  key secure.

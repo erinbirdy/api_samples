@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>JSON Test Page</title>
+  <script src="http://code.jquery.com/jquery-1.4.4.js"></script>
+	<script>
+	// Replace YOURAPIKEY with appropriate key
+	// Replace ACCOUNT_ID with your ACCOUNT_ID
+	// APIKEY should have access to Read on Account.Category
+	
+	$(document).ready(function() {
+		$.getJSON("https://YOURAPIKEY:apikey@mos.local/API/Account/ACCOUNT_ID/Category.json?callback=?",
+		  {
+		    nodeDepth: "0"
+		  },
+		  function(data) {
+		    $.each(data.Category, function(i,category){
+				$("<li>"+category.name+"</li>").appendTo($("#categories"));
+		    });
+		  });
+	});
+	</script>
+</head>
+<body>
+	<ul id="categories">
+	</ul>
+</body>
+</html>
