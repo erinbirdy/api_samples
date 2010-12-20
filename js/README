@@ -2,4 +2,4 @@ The "list_categories.html" example shows how to use the JSONP interface to pull 
 
 NOTE: Using the JSONP interface will expose your API key publicly so make sure to strictly limit access provisioning provided to keys used in these cases. If you need to create, update or delete we recommend using a Javascript proxy so you can keep your API  key secure.
 
-We recommend using PHP Simple Proxy (http://benalman.com/projects/php-simple-proxy/) or something similar to pull JSON from our system using javascript while avoiding cross-domain script issues.
+We recommend using PHP Simple Proxy (http://github.com/cowboy/php-simple-proxy/) or something similar to pull JSON from our system using javascript while avoiding cross-domain script issues.
