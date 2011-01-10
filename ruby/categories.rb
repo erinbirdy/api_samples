@@ -5,7 +5,7 @@ require 'rexml/document'
 account_id = 797 
 
 # Substitute your username and password of course
-uri = URI.parse("https://imademo:thisismypass@rad.merchantos.com:443/API/Account/#{account_id}/Category.xml?nodeDepth=0")
+uri = URI.parse("https://imademo:thisismypass@radapi.merchantos.com:443/API/Account/#{account_id}/Category.xml?nodeDepth=0")
 
 # API Key example
 # uri = URI.parse("https://SOME_REALLY_LONG_API_KEY_STRING:apikey@rad.merchantos.com:443/API/Account/#{account_id}/Category.xml")
