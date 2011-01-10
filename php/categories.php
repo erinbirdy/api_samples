@@ -13,7 +13,7 @@ $account_id = 797;
 $curl = curl_init();
 
 // Set URL
-curl_setopt($curl, CURLOPT_URL, "https://rad.merchantos.com/API/Account/$account_id/Category.xml?nodeDepth=0");
+curl_setopt($curl, CURLOPT_URL, "https://radapi.merchantos.com/API/Account/$account_id/Category.xml?nodeDepth=0");
 
 // Authenticate
 curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
