@@ -24,7 +24,7 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/xml', $a
 
 // Set Request Type 
 // (you'll need to change this depending on what you're doing)
-curl_setopt($curl,CURLOPT_GET, 1);
+curl_setopt($curl,CURLOPT_HTTPGET, 1);
 // curl_setopt($curl,CURLOPT_POST, 1);  // POST (Create)
 // curl_setopt($curl,CURLOPT_PUT, 1); // PUT (Update)
 // curl_setopt($curl,CURLOPT_CUSTOMREQUEST, 'DELETE') // DELETE
