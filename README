@@ -1,1 +1,5 @@
 Sample code for using the MerchantOS API in various languages. Please feel free to send pull requests if you have implementations you would like to share.
+
+PHP Library:
+There is a helpful PHP wrapper class that makes it easier to use cURL to call the MerchantOS API. You'll find it under ./php/MOSAPI/
+For example usage see ./php/MOSAPI/example.php
