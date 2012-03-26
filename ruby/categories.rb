@@ -1,23 +1,21 @@
-require 'net/https'
+require 'net/http'
 require 'rexml/document'
 
 # Your account_id number
-account_id = 797 
+account_id = 001 
+api_key = 010101010101010101010
 
-# Substitute your username and password of course
-uri = URI.parse("https://imademo:thisismypass@api.merchantos.com:443/API/Account/#{account_id}/Category.xml?nodeDepth=0")
-
-# API Key example
-# uri = URI.parse("https://SOME_REALLY_LONG_API_KEY_STRING:apikey@rad.merchantos.com:443/API/Account/#{account_id}/Category.xml")
-
-request = Net::HTTP::Get.new(uri.path+ '?' + uri.query) 
-request.basic_auth uri.userinfo.split(':')[0], uri.userinfo.split(':')[1]
-
-http = Net::HTTP.new(uri.host, uri.port) 
-http.use_ssl = true
-response = http.request(request)
+uri = URI('https://api.merchantos.com/API/Account/#{account_id}/Category.xml')
+response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+  request = Net::HTTP::Get.new uri.request_uri
+  # or use username and password instead (not recommended)
+  # request.basic_auth username, password
+	request.basic_auth api_key
+	response = http.request request
+end
 
 xml = REXML::Document.new(response.body);
+
 xml.elements.each('Categories/Category/name') do |name|
   puts name.text
 end
